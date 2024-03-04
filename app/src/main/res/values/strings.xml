@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="Monday">Monday</string>
+    <string name="Tuesaday">Tuesday</string>
+    <string name="Wednesday">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+    <string name="date1">12 March</string>
+    <string name="date2">13 March</string>
+    <string name="date3">3 March</string>
+    <string name="date4">30 March</string>
+
+</resources>
