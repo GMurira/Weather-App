@@ -10,6 +10,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -18,10 +19,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.weatherapp.ui.theme.WeatherAppTheme
 
+
+enum class WeatherNavigation(){
+    Home,
+    Location
+}
 @Composable
 fun WeatherLocationPage(modifier: Modifier = Modifier){
-    Column(modifier = Modifier.fillMaxSize()) {
+    Scaffold(
+        //topBar = WeatherTopAppBar()
+    ) {it
+        Column(modifier = Modifier.fillMaxSize()) {
 
+        }
     }
 }
 @Composable
@@ -51,19 +61,30 @@ fun WeatherLocationCard(){
                     )
                     }
                 }
-            Column {
-                Row (modifier = Modifier.fillMaxWidth()){
-
-                }
-
-            }
+           Row(
+               modifier = Modifier.fillMaxWidth(),
+               horizontalArrangement = Arrangement.SpaceBetween)
+           {
+               Text(text = "720hpa")
+               Text(text = "32%")
+               Text(text = "12km/h")
+           }
             }
         }
 
 }
 @Composable
-fun CardComponets(){
+fun WeatherCardGraphComponent(){
+    Card {
 
+    }
+}
+@Preview(showBackground = true)
+@Composable
+fun WeatherCardGraphPreview(){
+    WeatherAppTheme {
+        WeatherCardGraphComponent()
+    }
 }
 @Preview(showBackground = true)
 @Composable

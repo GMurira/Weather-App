@@ -1,7 +1,6 @@
 package com.example.weatherapp.ui.screens
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,7 +9,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Card
@@ -22,8 +23,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.R
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
@@ -114,6 +113,25 @@ fun WeatherTopAppBar(){
            }
        }
    )
+}
+@Composable
+fun WeatherBottomAppBar(){
+    Row(
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.fillMaxWidth().padding(16.dp))
+    {
+        Icon(imageVector = Icons.Default.Home, contentDescription = "Home Button")
+        Icon(imageVector = Icons.Default.Add, contentDescription = "Add Button")
+        Icon(imageVector = Icons.Default.Face, contentDescription = "Account Button")
+    }
+}
+@Preview(showBackground = true)
+@Composable
+fun WeatherBottomAppBarPreview(){
+    WeatherAppTheme {
+        WeatherBottomAppBar()
+    }
 }
 @Preview(showBackground = true)
 @Composable
